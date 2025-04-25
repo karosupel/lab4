@@ -22,6 +22,11 @@ then
 	echo "--logs (lub -l) - tworzy sto plikow logX.txt"
 	echo "--logs (lub -l x) X - tworzy X plikow logX.txt"
 	echo "--help (lub -h) - wypisuje liste dostepnych komend"
+elif [ "$1" = "--init" ]
+then
+	repoURL="https://github.com/karosupel/lab4.git"
+	git clone "$repoURL" $(pwd)
+	export PATH=$PATH:"$(pwd)/$repoURL"
 else
 	echo "Prosze podac odpowiednia flage"
 fi
