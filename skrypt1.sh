@@ -22,6 +22,8 @@ then
 	echo "--logs (lub -l) - tworzy sto plikow logX.txt"
 	echo "--logs (lub -l x) X - tworzy X plikow logX.txt"
 	echo "--help (lub -h) - wypisuje liste dostepnych komend"
+	echo "--error (lub -e) - tworzy sto plikow errorX.txt"
+	echo "--error X (lub -e X) - tworzy X plikow errorX.txt"
 elif [ "$1" = "--init" ]
 then
 	repoURL="https://github.com/karosupel/lab4.git"
