@@ -27,6 +27,19 @@ then
 	repoURL="https://github.com/karosupel/lab4.git"
 	git clone "$repoURL" $(pwd)
 	export PATH=$PATH:"$(pwd)/$repoURL"
+elif [ "$1" = "--error" ] || [ "$1" = "-e" ] && [ "$2" = "" ]
+then
+        for ((i=1; i<=100; i++))
+        do
+                touch error$i.txt
+        done
+elif [ "$1" = "--error" ] || [ "$1" = "-e" ] && [ "$2" -gt 0 ]
+then
+        for ((i=1; i<="$2"; i++))
+        do
+                touch error$i.txt
+        done
+
 else
 	echo "Prosze podac odpowiednia flage"
 fi
