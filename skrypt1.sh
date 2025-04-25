@@ -18,9 +18,10 @@ then
 elif [ "$1" = "--help" ] || [ "$1" = "-h" ]
 then
 	echo "Dostepne komedy to: "
-	echo "--date - wyswietla dzisiejsza date"
-	echo "--logs - tworzy sto plikow logX.txt"
-	echo "--logs X - tworzy X plikow logX.txt"
+	echo "--date (lub -d) - wyswietla dzisiejsza date"
+	echo "--logs (lub -l) - tworzy sto plikow logX.txt"
+	echo "--logs (lub -l x) X - tworzy X plikow logX.txt"
+	echo "--help (lub -h) - wypisuje liste dostepnych komend"
 else
 	echo "Prosze podac odpowiednia flage"
 fi
